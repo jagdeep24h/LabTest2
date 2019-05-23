@@ -52,7 +52,7 @@ namespace CalcAppTest
             Assert.AreEqual(expectedResult, actualResult);
         }
         [Test]
-        // Case 2
+        // Case 3
         public void GetAddition_Inputminus55and55_Returnsminus40()
         {
 
@@ -70,7 +70,25 @@ namespace CalcAppTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        
+            [Test]
+        // Case 4
+        public void GetSubtraction_Input55and15_Returnsminus35()
+        {
 
+            //Arrange
+            double number1 = 50;
+            double number2 = 15;
 
+            double expectedResult = number1 - number2;
+
+            Calc testCalc = new Calc(number1, number2);
+
+            //Act
+            double actualResult = testCalc.GetSubtraction();
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
