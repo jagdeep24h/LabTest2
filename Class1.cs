@@ -111,7 +111,7 @@ namespace CalcAppTest
         }
         [Test]
         // Case 6
-        public void GetSubtraction_Input6minus10andfive_Returnsminus15()
+        public void GetSubtraction_Inputminus10and5_Returnsminus15()
         {
 
             //Arrange
@@ -128,5 +128,26 @@ namespace CalcAppTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [Test]
+        // Case 7
+        public void GetMultiplication_Input10and5_Returns50()
+        {
+
+            //Arrange
+            double number1 = 10;
+            double number2 = 5;
+
+            double expectedResult = number1 * number2;
+
+            Calc testCalc = new Calc(number1, number2);
+
+            //Act
+            double actualResult = testCalc.GetMultiplication();
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
     }
 }
