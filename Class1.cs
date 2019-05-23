@@ -14,12 +14,12 @@ namespace CalcAppTest
     class CalcTests
     {
         [Test]
-        public void GetAddition_Input6point46and5point54_Returns12point0()
+        public void GetAddition_Input112and140_Returns252()
         {
 
             //Arrange
-            double number1 = 6.46;
-            double number2 = 5.54;
+            double number1 = 112;
+            double number2 = 140;
 
             double expectedResult = number1 + number2;
 
