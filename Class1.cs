@@ -129,13 +129,32 @@ namespace CalcAppTest
             Assert.AreEqual(expectedResult, actualResult);
         }
         [Test]
-        // Case 7
-        public void GetMultiplication_Input10and5_Returns50()
+        // Case 8
+        public void GetMultiplication_Input10andminus5_Returnsminus50()
         {
 
             //Arrange
             double number1 = 10;
-            double number2 = 5;
+            double number2 = -5;
+
+            double expectedResult = number1 * number2;
+
+            Calc testCalc = new Calc(number1, number2);
+
+            //Act
+            double actualResult = testCalc.GetMultiplication();
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        // Case 9
+        public void GetMultiplication_Input6and5_Returnsminus300()
+        {
+
+            //Arrange
+            double number1 = 5;
+            double number2 = 6;
 
             double expectedResult = number1 * number2;
 
